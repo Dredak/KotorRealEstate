@@ -1,0 +1,117 @@
+.choose {
+    padding-top: 3.1rem;
+    @include wrapper-center;
+
+    @include responsive(desk) {
+        padding-top: 2.1527777777777777vw;
+        width: 100%;
+    }
+
+    &__content-wrapper {
+        @include flex-column;
+    }
+
+    &__heading {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-left: 1.3rem;
+        padding-right: 1.8rem;
+        width: 107.6rem;
+        height: 13.55rem;
+        border-bottom: 2px solid $black-light;
+        margin: 0 auto;
+
+        @include responsive(desk) {
+            padding-left: 0.9027777777777777vw;
+            padding-right: 1.25vw;
+            width: 74.72222222222223vw;
+            height: 9.409722222222221vw;
+        }
+
+        @include responsive(tab) {
+            @include flex-column;
+            width: 90%;
+            padding-left: 0px;
+            padding-right: 0px;
+            height: fit-content;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        color: $black-light;
+        margin-top: 8.5rem;
+        margin-right: 14.8rem;
+
+        @include responsive(desk) {
+            font-size: 2.5vw;
+            margin-top: 5.902777777777778vw;
+            margin-right: 10.277777777777777vw;
+        }
+
+        @include responsive(tab) {
+            font-size: 3.6rem;
+            margin-top: 5rem;
+            margin-right: 0px;
+        }
+
+        @include responsive (phone) {
+            font-size: 2.6rem;
+        }
+    }
+
+    &__img {
+        width: 58.3rem;
+        height: 13.4rem;
+
+        @include responsive(desk) {
+            width: 40.486111111111114vw;
+            height: 9.305555555555555vw;
+        }
+
+        @include responsive(tab) {
+            width: 58.3rem;
+            height: 13.4rem;
+        }
+
+        @include responsive (phone) {
+            width: 30.375rem;
+            height: 7rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__paragraph {
+        font-family: "Open-sans-light";
+        font-size: 1.8rem;
+        color: $black-light;
+        padding: 5.1rem 39.5rem 5.3rem 40.1rem;
+
+        @include responsive(desk) {
+            font-size: 1.25vw;
+            padding: 3.5416666666666665vw 27.430555555555557vw 3.680555555555556vw 27.84722222222222vw;
+        }
+
+        @include responsive(tab) {
+            font-size: 1.8rem;
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 7rem;
+        }
+
+        @include responsive (phone) {
+            font-size: 1.8rem;
+            line-height: 2.25rem;
+            padding-bottom: 4rem;
+        }
+    }
+}

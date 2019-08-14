@@ -1,0 +1,309 @@
+.footer {
+    height: 24.4rem;
+    background-color: $blue-dark;
+    position: relative;
+    font-size: 1.4rem;
+    color: $white-pale;
+    padding-top: 3rem;
+
+    @include responsive(desk) {
+        padding-top: 2.083333333333333vw;
+    }
+
+    @include responsive(tab-sml) {
+        height: fit-content;
+        font-size: 1.8rem;
+    }
+
+    &__content-wrapper {
+        @include wrapper-center;
+        
+        @include flex-column;
+
+        @include responsive(desk) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-left: 8rem;
+
+        @include responsive(desk) {
+            padding-left: 5.555555555555555vw;
+        }
+        
+        @include responsive(tab) {
+            padding-left: 2rem;
+            margin:  0 auto;
+        }
+
+        @include responsive(tab-sml) {
+            flex-direction: column;
+            padding-left: 0px;
+            margin: 0px auto;
+        }
+    }
+
+    &__links {
+        @include flex-column;
+
+        @include footer-item-border;
+
+        width: 17rem;
+        height: 12.6rem;
+        padding-top: 1.1rem;
+        &__item {
+            color: inherit;
+            font-weight: 300;
+            &:not(:last-child) {
+                padding-bottom: 1.8rem;
+            }
+        }
+
+        @include responsive(tab) {
+            width: 15rem;
+        }
+
+        @include responsive(tab-sml) {
+            width: 100%;
+            margin-top: 2rem;
+            order: 1;
+        }
+    }
+
+    &__blog-faq {
+        @include flex-column;
+
+        @include footer-item-border;
+
+        width: 18.3rem;
+        height: 12.6rem;
+        padding-top: 1.1rem;
+        padding-left: 3.3rem;
+        &__blog {
+            color: inherit;
+            padding-bottom: 2.1rem;
+        }
+        &__faq {
+            color: inherit;
+            text-transform: uppercase;
+        }
+
+        @include responsive(desk) {
+            padding-left: 2.2916666666666665vw;
+        }
+
+        @media all and (max-width: 1100px) {
+            width: 15rem;
+        }
+
+        @include responsive(tab) {
+            width: 8rem;
+            padding-left: 1rem;
+        }
+
+        @include responsive(tab-sml) {
+            padding-left: 0px;
+            order: 2;
+        }
+    }
+
+    &__address-wrapper {
+        font-style: normal;
+        font-family: "Open-sans-regular";
+    }
+
+    &__address-inner-wrapper {
+        display: flex;
+        align-items: center;
+        padding-top: .5rem;
+    }
+
+    &__address {
+        @include flex-column;
+
+        @include footer-item-border;
+
+        width: 30.1rem;
+        height: 12.6rem;
+        padding-top: 1.2rem;
+        padding-left: 4.9rem;
+        &__city {
+            font-family: "Montserrat";
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $white;
+
+            @include responsive(tab-sml) {
+                font-size: 2.2rem;
+            }
+        }
+        &__street {
+
+        }
+        &__location-icon {
+            padding-right: 1.2rem;
+        }
+
+        @include responsive(desk) {
+            padding-left: 3.4027777777777777vw;
+        }
+
+        @include responsive(tab-sml) {
+            padding-left: 0px;
+            padding-top: 3rem;
+            height: fit-content;
+            margin-bottom: 1rem;
+            order: 5;
+        }
+    }
+    
+    &__mon-fri {
+        padding-top: 1.9rem;
+    }
+
+    &__sat {
+        padding-top: 1rem;
+    }
+
+    &__property {
+        height: 12.6rem;
+        width: 16.8rem;
+        padding-top: 2.1rem;
+        margin-left: 4.8rem;
+        &__text {
+            font-size: 1.2rem;
+            padding-left: 1.2rem;
+            padding-bottom: 2.7rem;
+            @include responsive(tab-sml) {
+                display: none;
+            }
+        }
+
+        @include responsive(desk) {
+            margin-left: 3.3333333333333335vw;
+        }
+
+        @include responsive(tab-sml) {
+            width: fit-content;
+            height: fit-content;
+            order: 3;
+        }
+    }
+
+    &__social-icons {
+        width: fit-content;
+        margin-left: 20rem;
+        padding-top: 1.4rem;
+        &__item {
+            &:not(:first-child) {
+                margin-left: 1rem;
+            }
+        }
+        div {
+            display: inline;
+            margin-left: 1rem;
+            @media all and (max-width: 1200px) {
+                display: block;
+                margin-left: 0px;
+                margin-top: 1rem;
+            }
+
+            @include responsive(tab-sml) {
+                display: inline-block;
+                margin-left: 1rem;
+            }
+        }
+        @include responsive(desk) {
+            margin-left: 5rem;
+        }
+
+        @media all and (max-width: 1200px) {
+            margin-left: 1rem;
+        }
+        
+        @include responsive(tab-sml) {
+            order: 4;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__terms {
+        display: flex;
+        height: 5rem;
+        padding-left: 8rem;
+        border-top: 1px solid $grey-secondary;
+        margin-top: 3.5rem;
+        align-items: center;
+        font-family: "Montserrat-light";
+        @include responsive(desk) {
+            padding-left: 5.555555555555555vw;
+        }
+        
+        @include responsive(tab) {
+            margin:  0 auto;
+            margin-top: 3.5rem;
+            padding-left: 2rem;
+        }
+
+        @include responsive(tab-sml) {
+            height: fit-content;
+            flex-direction: column;
+            padding: 0px;
+            margin: 0px;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            text-align: start;
+            align-items: flex-start;
+        }
+
+        &__privacy {
+            @include responsive(tab-sml) {
+                order: 2;
+                padding-bottom: 2rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-left: -60px;
+            }
+        }
+        &__general {
+            margin-left: 5.8rem;
+            @include responsive(tab-sml) {
+                order: 1;
+                margin-left: 0px;
+                padding-bottom: 2rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        &__rights {
+            margin-left: 66.6rem;
+
+            @include responsive(desk) {
+                margin-left: 51.6rem;
+            }
+
+            @media all and (max-width: 1200px) {
+                margin-left: 35rem;
+            }
+
+            @include responsive(tab) {
+                margin-left: 24rem;
+            }
+
+            @include responsive(tab-sml) {
+                order: 3;
+                margin-left: 0px;
+                padding-bottom: 2rem;
+                border-top: 1px solid $grey-secondary;
+                padding-top: 3rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+}

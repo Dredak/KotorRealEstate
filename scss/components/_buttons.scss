@@ -1,0 +1,135 @@
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rem;
+    transition: all .5s;
+    &:hover {
+        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+        transform: translateY(-3px);
+    }
+    &:active {
+        box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.75);
+        transform: translateY(-1px);
+    }
+
+    &__nav-margin {
+        margin-left: 24.4rem;
+        @include responsive(desk) {
+            margin-left: 16.944444444444446vw;
+        }
+        @media all and (max-width: 1100px){
+            margin-left: 13.944444444444446vw;
+        }
+        @include responsive(tab) {
+            margin-left: 0px;
+        }
+    }
+}
+
+.btn--small {
+    width: 16.8rem;
+    height: 3.9rem;
+
+    @include responsive(tab-sml) {
+        width: 19rem;
+    }
+}
+
+.btn--medium {
+    width: 21rem;
+    height: 4.8rem;
+    font-size: 1.8rem;
+    @include responsive(desk) {
+        width: 14.583333333333334vw;
+        min-width: 16.8rem;
+        height: 3.3333333333333335vw;
+        font-size: 1.25vw;
+        padding: 0 5px;
+    }
+
+    @include responsive(tab) {
+        width: 21rem;
+        height: 4.8rem;
+        font-size: 1.8rem;
+    }
+}
+
+.btn--large {
+    width: 27.2rem;
+    height: 6rem;
+    font-size: 1.6rem;
+    border: none;
+    display: block;
+    margin: 0 auto;
+
+    @include responsive(desk) {
+        width: 18.88888888888889VW;
+        height: 4.166666666666666VW;
+        font-size: 1.1111111111111112VW;
+    }
+
+    @include responsive(tab) {
+        width: 27.2rem;
+        height: 6rem;
+        font-size: 1.6rem;
+    }
+
+    @include responsive(phone) {
+        width: 27.25‬rem;
+        height: 7.5‬rem;
+        font-size: 1.625rem;
+    }
+}
+
+.btn--extra-large {
+    width: 29rem;
+    height: 6rem;
+    font-size: 1.8rem;
+}
+
+.btn--transparent {
+    color: $white-pale;
+    border: 2px solid $green-light;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $green-light;
+        color: $white;
+    }
+}
+
+.btn--green {
+    background-color: $green-light;
+    color: $white;
+}
+
+.btn--blue {
+    background-color: $blue-dark;
+    color: $white;
+}
+
+.btn--light-yellow {
+    background-color: $light-yellow;
+    color: $white;
+}
+
+.btn--yellow {
+    background-color: $yellow;
+    color: $white;
+}
+
+.btn--video {
+    width: 23.7rem;
+    height: 6.3rem;
+    padding: 1.2rem 2.8rem 1.3rem 1.5rem;
+    font-size: 1.6rem;
+    color: $grey-secondary;
+    border: 1px solid $grey-secondary;
+    margin-top: 3rem;
+    &:hover {
+        background-color: $green-light;
+        color: $white;
+    }
+}

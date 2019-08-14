@@ -1,0 +1,240 @@
+.header {
+    display:flex;
+    align-items: center;
+    @include wrapper-center;
+    height: 7.9rem;
+    padding: 3.1rem 0px 0px 3.5rem;
+
+    @include responsive(desk) {
+        width: 100%;
+        padding-left: 2.430555555555556vw;
+    }
+    
+    @media all and (max-width: 996px) {
+        justify-content: space-between;
+        background-color: $blue-dark;
+        padding-top: 0px;
+        position: relative;
+    }
+
+    &__logo {
+        @include responsive(desk) {
+            width: 13.194444444444445vw;
+            min-width: 13rem;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        @include responsive(tab) {
+            width: 152px;
+        }
+    }
+
+    &__visible {
+        display: flex;
+
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        opacity: 1;
+
+        @include responsive(tab) {
+            position: absolute;
+            top: 63.2px;
+            left: 0px;
+            z-index: 1;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            padding: 3rem 0px;
+            opacity: 0;
+            background-color: rgba($blue-dark, 0.9);
+            transform-origin: top;
+            transition: opacity .6s;
+            transform: scale(0);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        font-size: 1.8rem;
+
+        @include responsive(desk) {
+            font-size: 1.25vw;
+        }
+        
+        @include responsive(tab) {
+            flex-direction: column;
+            align-items: center;
+            font-size: 2.2rem;
+            padding-bottom: 2rem;
+        }
+
+        align-self: center;
+        padding-top: 2px;
+        
+        &__link {
+            color: $white-pale;
+        }
+        
+        &__first-item {
+            padding-left: 4.2rem;
+            white-space: nowrap;
+
+            @include responsive(desk) {
+                padding-left: 2.9166666666666665vw;
+            }
+
+            @include responsive(tab) {
+                padding-left: 0px;
+            }
+        }
+
+        &__second-item {
+            padding-left: 2.9rem;
+
+            @include responsive(desk) {
+                padding-left: 2.013888888888889vw;
+            }
+
+            @include responsive(tab) {
+                padding-left: 0px;
+                margin-top: 1rem;
+            }
+        }
+
+        &__third-item {
+            padding-left: 5.1rem;
+
+            @include responsive(desk) {
+                padding-left: 3.5416666666666665vw;
+            }
+            @include responsive(tab) {
+                padding-left: 0px;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 21.4rem;
+        color: $white-pale;
+        font-size: 1.6rem;
+            
+        @include responsive(desk) {
+            margin-left: 11.86111111111111vw;
+            font-size: 1.1111111111111112vw;
+        }
+
+        @include responsive(tab) {
+            font-size: 2rem;
+            margin-left: 0px;
+            margin-top: 2rem;
+        }
+
+        &__text {
+            white-space: nowrap;
+        }
+
+        &__icon {
+            margin-left: .8rem;
+            @include responsive(desk) {
+                margin-left: 0.5555555555555556vw;
+            }
+        }
+    }
+
+
+    &__language {
+        display: flex;
+        margin-left: 4.2rem;
+
+        @include responsive(tab) {
+            margin-left: 10px;
+            margin-top: 2rem;
+        }
+
+        &__flag {
+
+            @include responsive(desk) {
+                width: 2.2222222222222223vw;
+            }
+
+            @include responsive(tab) {
+                width: 32px;
+            }
+        }
+
+        &__arrow {
+            margin-left: .5rem;
+        }
+    }
+
+    
+&__hamburger {
+    display: none;
+    margin-right: 2rem;
+    cursor: pointer;
+
+    @include responsive(tab) {
+        display: block;
+    }
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: $white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+    transform: rotate(-45deg) translate(-5px, 4px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8.5px, -8.5px);
+    transform: rotate(45deg) translate(-8.5px, -8.5px);
+  }
+}
+
+.zoom-in {
+    animation-name: zoom-in;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.zoom-out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@keyframes zoom-out {
+    from {transform:scale(1)} 
+    to {transform:scale(0)}
+}

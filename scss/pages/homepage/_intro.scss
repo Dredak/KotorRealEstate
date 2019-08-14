@@ -1,0 +1,282 @@
+.homepage-intro {
+    height: 780px;
+    background-image: linear-gradient( rgba($black, 0.31), rgba($black, 0.31)), url("/img/Bitmap-min.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media all and (max-width: 1200px) {
+        height: 100vh;
+        min-height: 700px;
+    }
+    
+    @include responsive (phone) {
+        min-height: 600px;
+    }
+
+    &__content-wrapper {
+        @include wrapper-center;
+        padding-top: 21.8rem;
+
+        @include responsive(desk) {
+            padding-top: 15.138888888888888vw;
+            width: 100%;
+        }
+    }
+
+    &__content-inner-wrapper {
+        width: 84.5rem;
+        margin: 0 auto;
+
+        @include responsive(desk) {
+            width: 58.68055555555556vw;
+        }
+
+        @include responsive (phone) {
+            width: 90%;
+        }
+    }
+
+    &__title {
+        width: 63.4rem;
+        font-size: 4.8rem;
+        line-height: 5.2rem;
+        margin: 0 auto;
+        font-family: "Montserrat-light";
+        text-align: center;
+        color: $white;
+        font-weight: 300;
+
+        @include responsive(desk) {
+            width: 44.02777777777778vw;
+            font-size: 3.3333333333333335vw;
+            line-height: 3.6111111111111107vw;
+        }
+
+        @include responsive(tab) {
+            width: 100%;
+            font-size: 4.8rem;
+            line-height: 5.2rem;
+        }
+
+        @include responsive (phone) {
+            font-size: 2.6rem;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 11.6rem;
+        @include responsive(desk) {
+            margin-top: 8.055555555555555vw;
+        }
+        @include responsive(tab) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__input {
+        border: none;
+        border-radius: 4px;
+        background-color: $white;
+        font-size: 1.6rem;
+        font-family: "Source-sans-pro";
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__location-icon {
+        position: absolute;
+        top: 1.9rem;
+        left: 39.9rem;
+        
+        @include responsive(desk) {
+            top: 1.3194444444444444vw;
+            left: 45%;
+        }
+
+        @media all and (max-width: 1100px) {
+            left: 40%;
+        }
+
+        @include responsive(tab) {
+            left: 90%;
+        }
+        
+    }
+
+    &__location {
+        width: 43.7rem;
+        padding: 2rem 4rem 1.7rem 1.9rem;
+        color: $black;
+        font-family: "Source-sans-pro";
+        &::placeholder {
+            font-size: 1.6rem;
+            color: $grey;
+        }
+
+        @include responsive(desk) {
+            width: 30.34722222222222vw;
+            padding: 1.3888888888888888vw 2.7777777777777777vw 1.1805555555555556vw 1.3194444444444444vw;
+            margin-right: 5px;
+        }
+        
+        @include responsive(tab) {
+            width: 100%;
+            padding: 2rem 4rem 1.7rem 1.9rem;
+            margin-right: 0px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__property {
+        width: 21.8rem;
+        padding: 1.84rem 0px 1.7rem 1.9rem;
+        -webkit-appearance:none;
+        &:invalid {
+            color: $grey;
+          }
+        option {
+            color: $black;
+            width: 21.8rem; 
+
+            @include responsive(desk) {
+                width: 15.138888888888888vw;
+            }
+        }
+
+        @include responsive(desk) {
+            width: 15.138888888888888vw;
+            padding: 1.2777777777777777vw 0px 1.1805555555555556vw 1.3194444444444444vw;
+            margin-right: 5px;
+        }
+
+        @media all and (max-width: 1075px) {
+            padding-left: .7vw;
+        }
+
+        @include responsive(tab) {
+            width: 100%;
+            padding: 1.84rem 0px 1.7rem 1.9rem;
+            margin-right: 0px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__property-icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 63.5rem;
+        color: black;
+
+        @include responsive(desk) {
+            left: 75%;
+        }
+        
+        @media all and (max-width: 1350px) {
+            left: 72%;
+        }
+
+        @media all and (max-width: 1200px) {
+            left: 69%;
+        }
+
+        @media all and (max-width: 1075px) {
+            left: 66.4%;
+        }
+
+        @include responsive(tab) {
+            top: 9rem;
+            left: 90%;
+        }
+    }
+
+    &__btn-search {
+        width: 17.7rem;
+        display: flex;
+        align-items: center;
+        background-color: $green-light;
+        padding: 1.8rem 5.4rem 1.6rem 3rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &__magnifier {
+
+        }
+        &__text {
+            margin-left: 1.6rem;
+            color: $white;
+        }
+
+        @include responsive(tab) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__dots-wrapper {
+        display: flex;
+        width: 7rem;
+        justify-content: space-between;
+        margin: 4.6rem auto 0px auto;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        border-radius: 50%;
+        &:first-child {
+            background-color: #50e3b3;
+        }
+    }
+
+    &__banner {
+        width: 72.8rem;
+        height: 9rem;
+        background-color: $black;
+        border: 1px solid $grey-light;
+        margin: 0 auto;
+        margin-top: 3.4rem;
+        @include responsive(desk) {
+            width: 50.55555555555556vw;
+            height: 6.25vw;
+        }
+
+        @include responsive(desk) {
+            width: 100%;
+            height: 70px;
+        }
+
+        @include responsive (phone) {
+            width: 100%;
+            height: 50px;
+        }
+    }
+
+    &__left-arrow {
+        position: absolute;
+        top: 41.7rem;
+        left: 4.2rem;
+        transform: rotate(90deg);
+
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+
+    &__right-arrow {
+        position: absolute;
+        top: 41.7rem;
+        right: 4.2rem;
+        transform: rotate(-90deg);
+
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+}
